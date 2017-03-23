@@ -3,7 +3,7 @@
 API="http://localhost:4741"
 URL_PATH="/profiles"
 # ID=""
-TOKEN="BAhJIiU5ODQ5Yzk1YmU4ZTZhZWU5ODRlNTVhNWUyZjI3MTE0YQY6BkVG--2155d39d3f3f9c3cf6d2fb5bcd5d289c9b480efe"
+TOKEN="BAhJIiUyZGRjMmFhMTU4ZGViYmI0NDNmMjk2OThlNDBlZGJhNQY6BkVG--9d00e7679d7fad4977cdbd5518043fc9b3a872d7"
 USERNAME="akgoode"
 FIRST="Andrew"
 LAST="Goode"
@@ -18,7 +18,8 @@ curl "${API}${URL_PATH}/${ID}" \
     "profile": {
       "username": "'"${USERNAME}"'",
       "first_name": "'"${FIRST}"'",
-      "last_name": "'"${LAST}"'"
+      "last_name": "'"${LAST}"'",
+      "user_id": 1
     }
   }'
 
