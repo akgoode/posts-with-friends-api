@@ -19,7 +19,7 @@ class PostsController < OpenReadController
     @post = current_user.posts.build(post_params)
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class PostsController < OpenReadController
   # PATCH/PUT /posts/1
   def update
     if @post.update(post_params)
-      render json: @post
+      head :no_content
     else
       render json: @post.errors, status: :unprocessable_entity
     end
@@ -39,8 +39,6 @@ class PostsController < OpenReadController
     @post.destroy
   end
 
-  private
-
   # Use callbacks to share common setup or constraints between actions.
   def set_post
     @post = current_user.posts.find(params[:id])
@@ -50,4 +48,5 @@ class PostsController < OpenReadController
   def post_params
     params.require(:post).permit(:title, :content)
   end
+  private :set_example, :example_params
 end
