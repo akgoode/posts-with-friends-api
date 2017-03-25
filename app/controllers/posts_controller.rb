@@ -48,5 +48,5 @@ class PostsController < OpenReadController
   def post_params
     params.require(:post).permit(:title, :content)
   end
-  private :set_example, :example_params
+  private :set_post, :post_params
 end

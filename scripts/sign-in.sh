@@ -2,7 +2,7 @@
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/sign-in"
-EMAIL="hi2@hi.com"
+EMAIL="hi@hi.com"
 PASSWORD="hi"
 curl "${API}${URL_PATH}" \
   --include \
