@@ -33,9 +33,14 @@ https://github.com/akgoode/posts-with-friends
 #### Deployed back-end:
 https://still-shelf-67479.herokuapp.com/
 
+## Technologies Used
+
+- Ruby on Rails
+- PSQL database
+
 ## Approach
 
-Initially I created a complex ERD for this app, which involved users being friends with each other and having posts be a resource on the join table between users.  I quickly moved this ERD to be a stretch goal and descoped my project to a simple ERD which is shown below.  For project week I wanted my focus to be on ember and producing a quality app in a front-end framework.  As a result, my back-end is much simpler than originally planned.
+Initially I created a complex ERD for this app, which involved users being friends with each other and having posts be a resource on the join table between users.  I quickly moved this ERD to be a stretch goal and descoped my project to a simple ERD which is shown below.  For project week I wanted my focus to be on ember and producing a quality app in a front-end framework.  As a result, my back-end is much simpler than originally planned.  Currently, posts is an open-read resource so that a user that isn't logged in can see posts and a list of posts.  This permits users to share links and visit my website's content without signing in.
 
 ## Goals
 
