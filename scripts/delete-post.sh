@@ -2,8 +2,10 @@
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/posts"
+TOKEN=""
 curl "${API}${URL_PATH}/${ID}" \
   --include \
-  --request GET
+  --request DELETE \
+  --header "Authorization: Token token=$TOKEN" \
 
 echo

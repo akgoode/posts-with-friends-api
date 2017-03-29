@@ -2,14 +2,12 @@
 
 API="${API_ORIGIN:-http://localhost:4741}"
 URL_PATH="/posts"
-TOKEN=""
-TITLE="best post ever"
-CONTENT="test post please ignore"
-curl "${API}${URL_PATH}" \
+TOKEN="<token>"
+curl "${API}${URL_PATH}/${ID}" \
   --include \
-  --request POST \
+  --request PATCH \
+  --header "Authorization: Token token=${TOKEN}" \
   --header "Content-Type: application/json" \
-  --header "Authorization: Token token=$TOKEN" \
   --data '{
     "post": {
       "title": "'"${TITLE}"'",
